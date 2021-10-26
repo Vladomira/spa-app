@@ -32,5 +32,6 @@ function Modal({ onClose, img }) {
 
 Modal.propTypes = {
   onClose: PropTypes.func.isRequired,
+  img: PropTypes.string.isRequired,
 };
 export default Modal;
