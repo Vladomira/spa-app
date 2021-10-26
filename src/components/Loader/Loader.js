@@ -5,7 +5,7 @@ function SpinLoader() {
   return (
     <Loader
       type="BallTriangle"
-      color="#85309f"
+      color="#3748a5"
       height={100}
       width={90}
       timeout={3000}
