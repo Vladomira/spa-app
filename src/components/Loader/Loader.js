@@ -7,7 +7,7 @@ function SpinLoader() {
       type="BallTriangle"
       color="#85309f"
       height={100}
-      width={100}
+      width={90}
       timeout={3000}
       style={{
         position: "fixed",

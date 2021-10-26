@@ -5,7 +5,10 @@ function FetchImgs(name, page) {
   return fetch(
     `https://pixabay.com/api/?q=${name}&page=${page}&key=${KEY}&image_type=photo&orientation=horizontal&per_page=12`
   )
-    .then((response) => response.json())
+    .then((response) => {
+      // console.log(response.status, "response");
+      return response.json();
+    })
     .catch((error) => Promise.reject(error));
 }
 
