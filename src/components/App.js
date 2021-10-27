@@ -33,7 +33,7 @@ function App() {
           return (
             setStatus("rejected"),
             alert("No such pictures, try again"),
-            setError(error)
+            setError((error) => `It is an error: ${error}.Please try again`)
           );
         } else {
           const data = entriesImgs.hits.map(
@@ -56,7 +56,7 @@ function App() {
         scroll();
       })
       .catch((error) => {
-        setError(`It is an ${error}, please try again`);
+        setError((error) => `It is an ${error}, please try again`);
         setStatus("rejected");
       });
   }, [page, imgName]);
