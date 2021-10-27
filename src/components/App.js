@@ -47,17 +47,19 @@ function App() {
               };
             }
           );
-          setEntriesImgs((prevState) => [...prevState, ...data]);
+          setEntriesImgs((prevState) => {
+            return [...prevState, ...data];
+          });
           setStatus("resolved");
           setForLoadMore(true);
         }
         scroll();
       })
       .catch((error) => {
-        setError("Something went wrong, please try again");
+        setError(`It is an ${error}, please try again`);
         setStatus("rejected");
       });
-  }, [error, page, imgName]);
+  }, [page, imgName]);
 
   const scroll = () => {
     window.scrollTo({
