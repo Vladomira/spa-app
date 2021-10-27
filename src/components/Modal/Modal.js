@@ -8,9 +8,10 @@ function Modal({ onClose, img }) {
   useEffect(() => {
     window.addEventListener("keydown", handleKeyDownESC);
     window.addEventListener("keydown", handleBackdropClick);
-
-    window.removeEventListener("keydown", handleKeyDownESC);
-    window.removeEventListener("keydown", handleBackdropClick);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDownESC);
+      window.removeEventListener("keydown", handleBackdropClick);
+    };
   });
   const handleKeyDownESC = (e) => {
     if (e.code === "Escape") {
