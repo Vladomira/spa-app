@@ -1,4 +1,5 @@
 import React from "react";
 export default function Container({ children }) {
-  return <div className="container">{children}</div>;
+  return <div>{children}</div>;
 }
+// className="container"
